@@ -1,22 +1,12 @@
-<script setup lang="ts">
-interface Producto {
-  id: number;
-  nombre: string;
-  precio: number;
-  imagen: string;
-  stock: number;
-  descripcion: string;
-}
+<script setup>
+defineProps({
+  producto: {
+    type: Object,
+    default: null
+  }
+});
 
-interface Props {
-  producto: Producto | null;
-}
-
-defineProps<Props>();
-
-const emit = defineEmits<{
-  cerrar: []
-}>();
+const emit = defineEmits(['cerrar']);
 
 const handleCerrar = () => {
   emit('cerrar');

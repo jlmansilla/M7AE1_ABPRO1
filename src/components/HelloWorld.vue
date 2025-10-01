@@ -1,10 +1,15 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+defineProps({
+  msg: {
+    type: String,
+    required: true
+  }
+})
 
 const count = ref(0)
-</script>
+</script>cript>
 
 <template>
   <h1>{{ msg }}</h1>

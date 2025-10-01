@@ -1,20 +1,34 @@
-<script setup lang="ts">
+<script setup>
 import { onBeforeMount, onMounted, onBeforeUnmount } from 'vue';
 
-interface Props {
-  id: number;
-  nombre: string;
-  precio: number;
-  imagen: string;
-  stock: number;
-  descripcion: string;
-}
+const props = defineProps({
+  id: {
+    type: Number,
+    required: true
+  },
+  nombre: {
+    type: String,
+    required: true
+  },
+  precio: {
+    type: Number,
+    required: true
+  },
+  imagen: {
+    type: String,
+    required: true
+  },
+  stock: {
+    type: Number,
+    required: true
+  },
+  descripcion: {
+    type: String,
+    required: true
+  }
+});
 
-const props = defineProps<Props>();
-
-const emit = defineEmits<{
-  agregarAlCarrito: [id: number]
-}>();
+const emit = defineEmits(['agregarAlCarrito']);
 
 onBeforeMount(() => {
   console.log(`[TarjetaProducto ${props.id}] - beforeMount: Componente a punto de montarse`);

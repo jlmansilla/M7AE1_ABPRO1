@@ -1,6 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import CatalogoProductos from './components/CatalogoProductos.vue'
-</script>
+</script>t>
 
 <template>
   <CatalogoProductos />

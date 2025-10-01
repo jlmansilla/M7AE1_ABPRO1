@@ -1,20 +1,9 @@
-<script setup lang="ts">
-import { ref, computed, Component } from 'vue';
+<script setup>
+import { ref, computed } from 'vue';
 import TarjetaProducto from './TarjetaProducto.vue';
 import DetalleProducto from './DetalleProducto.vue';
 
-interface Producto {
-  id: number;
-  nombre: string;
-  precio: number;
-  imagen: string;
-  stock: number;
-  descripcion: string;
-  esOferta?: boolean;
-  etiqueta?: string;
-}
-
-const productos = ref<Producto[]>([
+const productos = ref([
   {
     id: 1,
     nombre: 'Laptop HP Pavilion',
@@ -69,18 +58,18 @@ const productos = ref<Producto[]>([
   }
 ]);
 
-const carrito = ref<number[]>([]);
-const productoSeleccionado = ref<Producto | null>(null);
-const componenteActivo = ref<Component | null>(null);
+const carrito = ref([]);
+const productoSeleccionado = ref(null);
+const componenteActivo = ref(null);
 
 const cantidadCarrito = computed(() => carrito.value.length);
 
-const agregarAlCarrito = (id: number) => {
+const agregarAlCarrito = (id) => {
   carrito.value.push(id);
   console.log(`Producto ${id} agregado al carrito. Total items: ${cantidadCarrito.value}`);
 };
 
-const verDetalle = (producto: Producto) => {
+const verDetalle = (producto) => {
   productoSeleccionado.value = producto;
   componenteActivo.value = DetalleProducto;
 };
