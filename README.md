@@ -221,6 +221,14 @@ Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ## 👨‍💻 Autor
 
+<h4 align="center"> 
+  <a href="https://github.com/CaroHernz">Carolina Hernández</a> | 
+	<a href="https://github.com/gurrutia15">Gonzalo Urrutia</a> | 
+	<a href="https://github.com/jlmansilla">Juan Luis Mansilla</a> | 
+	<a href="https://github.com/lcarrilloq">Luis Carrillo</a> | 
+</h4>
+
+
 Desarrollado como parte del Módulo 7 - Bootcamp Desarrollo de Aplicaciones Front-end Trainee
 
 ---
